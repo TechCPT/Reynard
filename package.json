@@ -1,0 +1,24 @@
+{
+  "name": "reynardBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/reynard.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechCPT/reynard-discordjsbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TechCPT/reynard-discordjsbot/issues"
+  },
+  "homepage": "https://github.com/TechCPT/reynard-discordjsbot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
