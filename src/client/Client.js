@@ -4,7 +4,7 @@ const { normalize, join } = require('path');
 
 class ReynardClient extends Client {
     constructor() {
-        super({ messageSweepInterval: 180, messageCacheLifetime: 180, messageCacheMaxSize: 200, ws { intents: Intents.ALL } });
+        super({ messageSweepInterval: 180, messageCacheLifetime: 180, messageCacheMaxSize: 200, ws: { intents: Intents.ALL } });
         this.commands = newCollection();
         this.aliases = newCollection();
         this.events = newCollection();
