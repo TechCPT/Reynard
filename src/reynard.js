@@ -1,11 +1,3 @@
+require('dotenv-flow').config();
 const Client = require('./client/Client');
-module.exports = {
-	name: 'ready',
-	/**
-	 *
-	 * @param {Client} client
-	 */
-	run: async (client) => {
-		console.log(`Logged in as ${client.user.tag}!`);
-	},
-};
+new Client().start(process.env.BOT_TOKEN, './commands', './events');
