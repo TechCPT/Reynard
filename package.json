@@ -1,5 +1,5 @@
 {
-  "name": "reynardBot",
+  "name": "reynard-discordjsbot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/TechCPT/reynard-discordjsbot#readme",
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "dotenv-flow": "^3.2.0",
+    "eslint": "^7.16.0"
   }
 }
