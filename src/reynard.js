@@ -5,9 +5,9 @@ new Client().start(process.env.BOT_TOKEN, './commands', './events');
 Client.on('ready', () => {
 	Client.user.setPresence({
 		game: {
-			name: 'my code',
+			name: 'Discord API',
 			type: 'WATCHING',
 		},
-		status: 'idle',
+		status: 'dnd',
 	});
 });
