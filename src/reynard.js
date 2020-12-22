@@ -8,6 +8,6 @@ Client.on('ready', () => {
 			name: 'Discord API',
 			type: 'WATCHING',
 		},
-		status: 'dnd',
+		status: 'online',
 	});
 });
