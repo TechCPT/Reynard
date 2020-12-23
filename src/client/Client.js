@@ -16,11 +16,23 @@ class ReynardClient extends Client {
 
 	start(token, cmdPath, eventPath) {
 		this.login(token);
+
+		this.on('ready', () => {
+			this.user.setPresence({
+				status: 'dnd',
+				activity: {
+					name: 'Discord API',
+					type: 'WATCHING',
+				},
+			});
+		});
+
 		readdirSync(join(process.cwd(), 'src', cmdPath)).map((data) => {
 			const file = require(join(process.cwd(), 'src', cmdPath, data));
 			this.commands.set(file.name, file);
 			if(file.aliases) file.aliases.map((alias) => this.aliases.set(alias, file.name));
 		});
+
 		readdirSync(join(process.cwd(), 'src', eventPath)).map((data) => {
 			const file = require(join(process.cwd(), 'src', eventPath, data));
 			this.events.set(file.name, file);
