@@ -22,8 +22,7 @@ class ReynardClient extends Client {
 				status: 'dnd',
 				activity: {
 					name: 'Discord API',
-					type: 'Watching',
-					url: 'Prefix: -',
+					type: 'WATCHING',
 				},
 			});
 		});
