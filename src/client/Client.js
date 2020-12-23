@@ -21,7 +21,7 @@ class ReynardClient extends Client {
 			this.user.setPresence({
 				status: 'dnd',
 				activity: {
-					name: `Use ${}help `,
+					name: `Use ${this.prefix}help`,
 				},
 			});
 		});
