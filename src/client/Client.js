@@ -21,7 +21,9 @@ class ReynardClient extends Client {
 			this.user.setPresence({
 				status: 'dnd',
 				activity: {
-					name: `Use ${this.prefix}help`,
+					name: 'Discord API',
+					type: 'Watching',
+					url: 'Prefix: -',
 				},
 			});
 		});

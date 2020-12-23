@@ -8,7 +8,7 @@ module.exports = {
      * @param {String[]} args
      */
 	run: async (client, message, args) => {
-        const msg = message.channel.send(`
+		const msg = message.channel.send(`
             Help commands coming soon!
         `);
 	},
