@@ -1,5 +1,6 @@
 const Client = require('../client/Client');
-const { Message } = require('discord.js');
+const { Message, MessageEmbed } = require('discord.js');
+
 module.exports = {
 	name: 'help',
 	/**
@@ -8,8 +9,13 @@ module.exports = {
      * @param {String[]} args
      */
 	run: async (client, message, args) => {
-		const msg = message.channel.send(`
-            Help commands coming soon!
-        `);
+		const msg = message.channel.send(
+			new MessageEmbed()
+				.setTitle('Reynard HELP')
+				.setColor('ORANGE')
+				.setDescription('Reynard is a multipurpose Discord bot built with Node.js.')
+				.addField('Reynard Official Discord', 'https://discord.gg/heHzCu3mx8')
+				.setFooter('© 2020 Reynard | Visit the Reynard Official Discord server for more information!'),
+		);
 	},
 };
