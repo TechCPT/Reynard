@@ -1,8 +1,8 @@
-const Client = require('../structures/Client');
-const { Message } = require('discord.js');
+const Client = require("../structures/Client");
+const { Message } = require("discord.js");
 
 module.exports = {
-	name: 'delete',
+	name: "delete",
 	/**
      * @param {Message} message
      * @param {Client} client
@@ -11,5 +11,5 @@ module.exports = {
 	run: async (client, message, args) => {
 		message.channel.bulkDelete(args);
 	},
-	aliases: ['del', 'purge'],
+	aliases: ["del", "purge"],
 };

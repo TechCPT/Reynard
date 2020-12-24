@@ -1,6 +1,6 @@
-const Client = require('../structures/Client');
+const Client = require("../structures/Client");
 module.exports = {
-	name: 'ready',
+	name: "ready",
 	/**
      * @param {Client} client
      */

@@ -1,7 +1,7 @@
-const Client = require('../structures/Client');
-const { Message } = require('discord.js');
+const Client = require("../structures/Client");
+const { Message } = require("discord.js");
 module.exports = {
-	name: 'message',
+	name: "message",
 	/**
      * @param {Message} message
      * @param {Client} client
