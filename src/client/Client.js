@@ -19,7 +19,7 @@ class ReynardClient extends Client {
 
 		this.on('ready', () => {
 			this.user.setPresence({
-				status: 'dnd',
+				status: 'online',
 				activity: {
 					name: 'Discord API',
 					type: 'WATCHING',
