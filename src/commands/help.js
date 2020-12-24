@@ -15,6 +15,7 @@ module.exports = {
 				.setColor('ORANGE')
 				.setDescription('Reynard is a multipurpose Discord bot built with Node.js.')
 				.addField('Reynard Official Discord', 'https://discord.gg/heHzCu3mx8')
+				.addField('List of Reynard Bot Commands', '!commands — COMING SOON!')
 				.setFooter('© 2020 Reynard | Visit the Reynard Official Discord server for more information!'),
 		);
 	},
