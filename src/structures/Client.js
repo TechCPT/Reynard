@@ -27,6 +27,15 @@ class ReynardClient extends Client {
 			});
 		});
 
+		this.snipes = new Map();
+		this.on("MessageDelete", function(message, channel) {
+			this.snipes.set(message.channel.id, {
+				content: message.content,
+				author: message.author.tag,
+				image: message.attachments.first() ? message.attachments.first().proxyURL : null,
+			});
+		});
+
 		readdirSync(join(process.cwd(), "src", cmdPath)).map((data) => {
 			const file = require(join(process.cwd(), "src", cmdPath, data));
 			this.commands.set(file.name, file);
