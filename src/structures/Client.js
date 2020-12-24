@@ -1,4 +1,4 @@
-const { Client, Collection, Intents } = require('discord.js');
+const { Client, Collection, Intents, MessageEmbed } = require('discord.js');
 const { readdirSync } = require('fs');
 const { normalize, join } = require('path');
 
@@ -38,6 +38,12 @@ class ReynardClient extends Client {
 			this.events.set(file.name, file);
 			this.on(file.name, file.run.bind(null, this));
 		});
+	}
+	embed(options, message) {
+		return new MessageEmbed({ ...options, color: 'ORANGE' }).setFooter(
+			`${message.author.tag} | ${this.user.username}`,
+			message.author.displayAvatarURL({ format: 'png', dynamic: true }),
+		);
 	}
 }
 module.exports = ReynardClient;

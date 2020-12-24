@@ -1,4 +1,4 @@
-const Client = require('../client/Client');
+const Client = require('../structures/Client');
 const { Message, MessageEmbed } = require('discord.js');
 
 module.exports = {
