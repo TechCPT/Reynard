@@ -11,5 +11,5 @@ module.exports = {
 	run: async (client, message, args) => {
 		message.channel.bulkDelete(args);
 	},
-	aliases: ['del'],
+	aliases: ['del', 'purge'],
 };
