@@ -8,9 +8,9 @@ module.exports = {
      * @param {Client} client
      * @param {String[]} args
      */
-	run: async (client, message, args[0]) => {
+	run: async (client, message, args) => {
 		message.channel.bulkDelete(args).then(() => {
-			message.channel.send("Deleted" + args[] + "messages.").then(msg => msg.delete(3000));
+			message.channel.send("Deleted" + args[0] + "messages.");
 		  });
 	},
 	aliases: ["del", "purge"],
