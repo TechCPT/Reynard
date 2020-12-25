@@ -9,6 +9,16 @@ class ReynardClient extends Client {
 		this.aliases = new Collection();
 		this.events = new Collection();
 		this.prefix = "r!";
+
+		this.snipes = new Map();
+		this.on("messageDelete", function(message, channel) {
+			this.snipes.set(message.channel.id, {
+				content: message.content,
+				author: message.author.tag,
+				image: message.attachments.first() ? message.attachments.first().proxyURL : null,
+			});
+		});
+
 	}
 	getCommand(cmd) {
 		return this.commands.get(cmd) || this.commands.get(this.aliases.get(cmd));
@@ -25,16 +35,6 @@ class ReynardClient extends Client {
 					type: "WATCHING",
 				},
 			});
-		});
-
-		this.snipes = new Map();
-		this.on("messageDelete", function(message, channel) {
-			this.snipes.set(message.channel.id, {
-				content: message.content,
-				author: message.author.tag,
-				image: message.attachments.first() ? message.attachments.first().proxyURL : null,
-			});
-			console.log(this.snipes);
 		});
 
 		readdirSync(join(process.cwd(), "src", cmdPath)).map((data) => {
