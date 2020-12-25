@@ -9,8 +9,22 @@ module.exports = {
      * @param {String[]} args
      */
 	run: async (client, message, args) => {
-		message.channel.bulkDelete(args[0]).then(() => {
-			message.channel.send("Deleted " + args[0] + " messages.");
+		if(!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send("Lack of permissions!");
+		let deleteAmount;
+
+		if(isNaN(args[0]) || parseInt(args[0]) <= 0) {
+			message.reply("Please input a valid amount.");
+		}
+
+		if(parseInt(args[0]) > 100) {
+			message.reply("You can only delete 100 messages at a time!");
+		}
+		else {
+			deleteAmount = parseInt(args[0]);
+		}
+
+		message.channel.bulkDelete(deleteAmount + 1, true).then(() => {
+			message.channel.send(`Deleted **${deleteAmount}** messages.`);
 		  });
 	},
 	aliases: ["del", "purge"],
