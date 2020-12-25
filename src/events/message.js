@@ -9,8 +9,8 @@ module.exports = {
 	run: async (client, message) => {
 		// console.log(`${client.user.tag} received the message ${message.content}!`);
 		if(message.author.bot || !message.guild || !message.content.toLowerCase().startsWith(client.prefix.toLowerCase())) return;
-		const [ cmd, ...args ] = message.content.slice(client.prefix.length).trim().split(/ +/g);
-		const command = client.getCommand(cmd.toLowerCase());
+		let [ cmd, ...args ] = message.content.slice(client.prefix.length).trim().split(/ +/g);
+		let command = client.getCommand(cmd.toLowerCase());
 		if(!command) return;
 		command.run(client, message, args).catch(console.error);
 	},
