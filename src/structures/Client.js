@@ -8,7 +8,7 @@ class ReynardClient extends Client {
 		this.commands = new Collection();
 		this.aliases = new Collection();
 		this.events = new Collection();
-		this.prefix = "-";
+		this.prefix = "r!";
 	}
 	getCommand(cmd) {
 		return this.commands.get(cmd) || this.commands.get(this.aliases.get(cmd));
