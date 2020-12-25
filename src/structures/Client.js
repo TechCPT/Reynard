@@ -34,6 +34,7 @@ class ReynardClient extends Client {
 				author: message.author.tag,
 				image: message.attachments.first() ? message.attachments.first().proxyURL : null,
 			});
+			console.log(this.snipes);
 		});
 
 		readdirSync(join(process.cwd(), "src", cmdPath)).map((data) => {
