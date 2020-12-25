@@ -27,5 +27,5 @@ module.exports = {
 			await message.channel.send(`Deleted **${deleteAmount}** messages!`).then(m => m.delete({ timeout: 5000 }));
 		});
 	},
-	aliases: ["del", "purge"],
+	aliases: ["del", "purge", "clear"],
 };
