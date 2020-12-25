@@ -1,5 +1,5 @@
 const Client = require("../structures/Client");
-const { Message, MessageEmbed } = require("discord.js");
+const { Message } = require("discord.js");
 
 module.exports = {
 	name: "delete",
@@ -23,8 +23,8 @@ module.exports = {
 			deleteAmount = parseInt(args[0]);
 		}
 
-		message.channel.bulkDelete(deleteAmount + 1, true).then(() => {
-			await message.channel.send(`Deleted **${deleteAmount}** messages!`).then(m => m.delete({timeout: 5000}))
+		message.channel.bulkDelete(deleteAmount + 1, true).then(async () => {
+			await message.channel.send(`Deleted **${deleteAmount}** messages!`).then(m => m.delete({ timeout: 5000 }));
 		});
 	},
 	aliases: ["del", "purge"],
