@@ -28,7 +28,7 @@ class ReynardClient extends Client {
 		});
 
 		this.snipes = new Map();
-		this.on("MessageDelete", function(message, channel) {
+		this.on("messageDelete", function(message, channel) {
 			this.snipes.set(message.channel.id, {
 				content: message.content,
 				author: message.author.tag,
