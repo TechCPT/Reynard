@@ -50,6 +50,7 @@ class ReynardClient extends Client {
 		});
 	}
 	embed(options, message) {
+		if (!message.guild.me.permissions.has("EMBED_LINKS")) return message.channel.send("Must have EMBED LINKS permission!");
 		return new MessageEmbed({ ...options, color: "ORANGE" }).setFooter(
 			`Requested by ${message.author.tag} | ${this.user.username}`,
 			message.author.displayAvatarURL({ format: "png", dynamic: true }),

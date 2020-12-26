@@ -12,8 +12,11 @@ module.exports = {
 		const msg = client.snipes.get(message.channel.id);
 		if(!msg) return message.channel.send("There are no deleted messages in this channel!");
 		const embed = new MessageEmbed()
+			.setColor("ORANGE")
 			.setAuthor(msg.author)
-			.setDescription(msg.content);
+			.setDescription(msg.content)
+			.setFooter(`Requested by ${message.author.tag} | ${this.user.username}`)
+			.setTimestamp();
 		if(msg.image)embed.setImage(msg.image);
 
 		message.channel.send(embed);
