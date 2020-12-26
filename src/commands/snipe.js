@@ -13,9 +13,8 @@ module.exports = {
 		if(!msg) return message.channel.send("There are no deleted messages in this channel!");
 		const embed = new MessageEmbed()
 			.setColor("ORANGE")
-			.setAuthor(msg.author)
+			.setAuthor(message.author.displayAvatarURL({ format: "png", dynamic: true }), msg.author)
 			.setDescription(msg.content)
-			.setThumbnail(message.author.displayAvatarURL({ format: "png", dynamic: true }))
 			.setFooter(`Requested by ${message.author.tag} | ${client.user.username}`)
 			.setTimestamp();
 		if(msg.image)embed.setImage(msg.image);
