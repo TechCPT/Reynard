@@ -15,7 +15,8 @@ module.exports = {
 			.setColor("ORANGE")
 			.setAuthor(msg.author)
 			.setDescription(msg.content)
-			.setFooter(`Requested by ${message.author.tag} | ${client.user.username}`, message.author.displayAvatarURL({ format: "png", dynamic: true }))
+			.setThumbnail(message.author.displayAvatarURL({ format: "png", dynamic: true }))
+			.setFooter(`Requested by ${message.author.tag} | ${client.user.username}`)
 			.setTimestamp();
 		if(msg.image)embed.setImage(msg.image);
 
