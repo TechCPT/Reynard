@@ -15,7 +15,7 @@ module.exports = {
 			.setColor("ORANGE")
 			.setAuthor(msg.author)
 			.setDescription(msg.content)
-			.setFooter(`Requested by ${message.author.tag} | ${this.user.username}`)
+			.setFooter(`Requested by ${message.author.tag} | ${this.client.user.username}`)
 			.setTimestamp();
 		if(msg.image)embed.setImage(msg.image);
 
