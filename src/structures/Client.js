@@ -51,9 +51,10 @@ class ReynardClient extends Client {
 	}
 	embed(options, message) {
 		return new MessageEmbed({ ...options, color: "ORANGE" }).setFooter(
-			`${message.author.tag} ${Date.now() - message.createdTimestamp} | ${this.user.username}`,
+			`Requested by ${message.author.tag} | ${this.user.username}`,
 			message.author.displayAvatarURL({ format: "png", dynamic: true }),
-		);
+		).setTimestamp(`${Date.now() - message.createdTimestamp}`)
+		;
 	}
 }
 module.exports = ReynardClient;
