@@ -21,17 +21,17 @@ module.exports = {
 		}).then(console.log)
 			.catch(console.error);
 
-		sourcebin.get("62cbad45ff")
+		await sourcebin.get(newsource.id)
 			.then(console.log)
 			.catch(console.error);
 
-		const shortLink = sourcebin.shorten("62cbad45ff");
+		const shortLink = sourcebin.shorten(newsource.id);
 
 		const embed = new MessageEmbed()
 			.setColor("ORANGE")
 			.setAuthor(message.author.displayAvatarURL({ format: "png", dynamic: true }), msg.author)
-			.setDescription(msg.content)
-			.setFooter(`Requested by ${message.author.tag} | ${client.user.username}`)
+			.setDescription("Here's your link:" + shortLink)
+			.setFooter(`Thanks for using ${client.user.username}!`)
 			.setTimestamp();
 
 		message.channel.send(embed);
