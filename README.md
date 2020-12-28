@@ -10,7 +10,7 @@
 
 # Reynard Bot
 
-Reynard is a Discord bot created by <b>TechCPT</b>. 
+Reynard is a Discord bot created by **TechCPT**. 
 
 You can invite the bot [here](https://discord.com/api/oauth2/authorize?client_id=790288591455518730&permissions=8&scope=bot).
 
@@ -21,7 +21,7 @@ ID: <@789897181724409868>
 
 # Development Status
 
-<b>Reynard</b> is still under active development. Have an idea? Make an issue.
+**Reynard** is still under active development. Have an idea? Make an issue.
 
 # Contributing
 
