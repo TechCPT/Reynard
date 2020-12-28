@@ -20,7 +20,7 @@ ID: <@789897181724409868>
 
 # Development Status
 
-</b>Reynard</b> is still under active development. Have an idea? Make an issue.
+<b>Reynard</b> is still under active development. Have an idea? Make an issue.
 
 # Contributing
 
