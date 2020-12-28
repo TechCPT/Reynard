@@ -2,6 +2,7 @@
 [![Top language](https://img.shields.io/github/languages/top/TechCPT/reynard-discordjsbot)](https://github.com/TechCPT/reynard-discordjsbot)
 [![Last commit](https://img.shields.io/github/last-commit/TechCPT/reynard-discordjsbot)](https://github.com/TechCPT/reynard-discordjsbot)
 
+[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 [![](https://tokei.rs/b1/github/TechCPT/reynard-discordjsbot?category=lines)](https://github.com/TechCPT/reynard-discordjsbot) 
 [![](https://tokei.rs/b1/github/TechCPT/reynard-discordjsbot?category=code)](https://github.com/TechCPT/reynard-discordjsbot) 
 [![](https://tokei.rs/b1/github/TechCPT/reynard-discordjsbot?category=files)](https://github.com/TechCPT/reynard-discordjsbot)
