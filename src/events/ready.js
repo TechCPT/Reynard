@@ -1,4 +1,4 @@
-const Client = require("../structures/Client");
+const Client = require("../handlers/Client");
 module.exports = {
 	name: "ready",
 	/**

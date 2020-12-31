@@ -1,4 +1,4 @@
-const Client = require("../structures/Client");
+const Client = require("../handlers/Client");
 const { Message, MessageEmbed } = require("discord.js");
 const { stripIndents } = require("common-tags");
 

@@ -1,3 +1,4 @@
+const Client = require("../handlers/Client");
 const { Message } = require("discord.js");
 const sourcebin = require("sourcebin");
 

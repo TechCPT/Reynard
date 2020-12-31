@@ -1,3 +1,3 @@
 require("dotenv-flow").config();
-const Client = require("./structures/Client");
+const Client = require("./handlers/Client");
 new Client().start(process.env.BOT_TOKEN, "./commands", "./events");
