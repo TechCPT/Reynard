@@ -1,4 +1,4 @@
-const Client = require("../handlers/Client");
+const Client = require("../../handlers/Client");
 const { Message, MessageEmbed, DiscordAPIError } = require("discord.js");
 
 module.exports = {
