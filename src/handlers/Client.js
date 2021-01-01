@@ -37,18 +37,22 @@ class ReynardClient extends Client {
 			});
 		});
 
+		// Commands
 		readdirSync(join(process.cwd(), "src", cmdPath)).map((data) => {
 			const file = require(join(process.cwd(), "src", cmdPath, data));
 			this.commands.set(file.name, file);
 			if(file.aliases) file.aliases.map((alias) => this.aliases.set(alias, file.name));
 		});
 
+		// Events
 		readdirSync(join(process.cwd(), "src", eventPath)).map((data) => {
 			const file = require(join(process.cwd(), "src", eventPath, data));
 			this.events.set(file.name, file);
 			this.on(file.name, file.run.bind(null, this));
 		});
 	}
+
+	// Embed
 	embed(options, message) {
 		if (!message.guild.me.permissions.has("EMBED_LINKS")) return message.channel.send("Must have EMBED LINKS permission!");
 		return new MessageEmbed({ ...options, color: "ORANGE" }).setFooter(
