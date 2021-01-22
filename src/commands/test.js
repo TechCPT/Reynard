@@ -15,11 +15,11 @@ module.exports = {
 				.setTitle("Reynard TEST Command")
 				.setColor("ORANGE")
 				.setDescription(stripIndents`
-                    Owner: xxDeon#5650
+                    Hey, my prefix is \`r!\`!
 					`,
 				)
 				.setFooter(`© 2020 Reynard | Requested by ${message.author.tag}`),
 		);
 	},
-	aliases: ["hello"],
+	aliases: ["hello", "hi", "prefix"],
 };
