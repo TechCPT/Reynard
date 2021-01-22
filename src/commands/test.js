@@ -18,7 +18,7 @@ module.exports = {
                     Hey, my prefix is \`r!\`!
 					`,
 				)
-				.setFooter(`© 2020 Reynard | Requested by ${message.author.tag}`),
+				.setFooter(`© 2020 Reynard | Requested by ${message.author.tag}`), message.author.displayAvatarURL({ format: "png", dynamic: true }),
 		);
 	},
 	aliases: ["hello", "hi", "prefix"],
