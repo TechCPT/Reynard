@@ -1,6 +1,5 @@
 const Client = require("../handlers/Client");
 const { Message, MessageEmbed } = require("discord.js");
-const { stripIndents } = require("common-tags");
 
 module.exports = {
 	name: "invite",
@@ -14,12 +13,9 @@ module.exports = {
 			new MessageEmbed()
 				.setTitle("Invite Reynard to your server!")
 				.setColor("ORANGE")
-				.setDescription(stripIndents`
-					https://discord.com/api/oauth2/authorize?client_id=801966643626377216&permissions=8&scope=bot
-					`,
-				)
-				.setFooter(`© 2020 Reynard | Requested by ${message.author.tag}`), message.author.displayAvatarURL({ format: "png", dynamic: true }),
+				.setDescription("https://discord.com/api/oauth2/authorize?client_id=801966643626377216&permissions=8&scope=bot")
+				.setFooter(`Requested by ${message.author.tag}`, message.author.displayAvatarURL({ format: "png", dynamic: true })),
 		);
 	},
-	aliases: ["inv"],
 };
+
