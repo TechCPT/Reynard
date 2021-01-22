@@ -3,7 +3,7 @@ const { Message, MessageEmbed } = require("discord.js");
 const { stripIndents } = require("common-tags");
 
 module.exports = {
-	name: "test",
+	name: "invite",
 	/**
      * @param {Message} message
      * @param {Client} client
@@ -12,14 +12,14 @@ module.exports = {
 	run: async (client, message, args) => {
 		const msg = message.channel.send(
 			new MessageEmbed()
-				.setTitle("Reynard TEST Command")
+				.setTitle("Invite Reynard to your server!")
 				.setColor("ORANGE")
 				.setDescription(stripIndents`
-                    Hey, my prefix is \`r!\`!
+					https://discord.com/api/oauth2/authorize?client_id=801966643626377216&permissions=8&scope=bot
 					`,
 				)
 				.setFooter(`© 2020 Reynard | Requested by ${message.author.tag}`), message.author.displayAvatarURL({ format: "png", dynamic: true }),
 		);
 	},
-	aliases: ["hello", "hi", "prefix"],
+	aliases: ["inv"],
 };
