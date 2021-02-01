@@ -12,12 +12,12 @@
 
 Reynard is a Discord bot created by **TechCPT**. 
 
-You can invite the bot [here](https://discord.com/api/oauth2/authorize?client_id=790288591455518730&permissions=8&scope=bot).
+You can invite the bot [here](https://discord.com/api/oauth2/authorize?client_id=801966643626377216&permissions=8&scope=bot).
 
 You can join the support server [here](https://discord.gg/heHzCu3mx8).
 
-Username: Reynard#1017 </br>
-ID: <@789897181724409868>
+Username: Reynard#4540 </br>
+ID: <@801966643626377216>
 
 # Development Status
 
