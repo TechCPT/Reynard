@@ -16,7 +16,8 @@ module.exports = {
 
 		const msg = message.channel.send(
 			new MessageEmbed()
-				.setTitle(`${member.username}'s avatar`)
+				.setAuthor(`${message.author.tag}`, member.displayAvatarURL({ format: "png", dynamic: true }))
+				.setTitle("Avatar")
 				.setColor("ORANGE")
 				.setImage(avatar),
 		);
