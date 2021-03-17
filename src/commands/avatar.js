@@ -18,8 +18,7 @@ module.exports = {
 			new MessageEmbed()
 				.setTitle(`${member.username}'s avatar`)
 				.setColor("ORANGE")
-				.setImage(avatar)
-				.setFooter("© 2021 Reynard | Visit the Reynard Official Discord server for more information!"),
+				.setImage(avatar),
 		);
 	},
 };
