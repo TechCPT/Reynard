@@ -20,13 +20,14 @@ module.exports = {
 					Reynard Official Discord — https://discord.gg/heHzCu3mx8
 					
 					**List of Reynard Bot Commands**
+					\`r!avatar\` — Displays the avatar image of a user.
 					\`r!commands\` – COMING SOON!
 					\`r!delete [# of messages]\` – Deletes the inputted amount of messages along with the command used.
 					\`r!ping\` – Shows the bot's current ping.
 					\`r!snipe\` – Reveals the most recently deleted message.
 					`,
 				)
-				.setFooter("© 2020 Reynard | Visit the Reynard Official Discord server for more information!"),
+				.setFooter("© 2021 Reynard | Visit the Reynard Official Discord server for more information!"),
 		);
 	},
 };
