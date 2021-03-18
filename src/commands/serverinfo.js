@@ -1,6 +1,5 @@
 const Client = require("../handlers/Client");
 const { Message, MessageEmbed } = require("discord.js");
-const moment = require("moment");
 
 module.exports = {
 	name: "serverinfo",
@@ -13,6 +12,7 @@ module.exports = {
 		const { guild } = message;
 
 		const { channelCount, createdAt, id, memberCount, name, owner, region, roles } = guild;
+
 		const textChannels = message.guild.channels.cache.filter(m => m.type === "text").size;
 		const voiceChannels = message.guild.channels.cache.filter(m => m.type === "voice").size;
 
