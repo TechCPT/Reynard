@@ -22,4 +22,5 @@ module.exports = {
 				.setImage(avatar),
 		);
 	},
+	aliases: ["av"],
 };
