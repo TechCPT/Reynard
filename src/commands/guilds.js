@@ -16,13 +16,15 @@ module.exports = {
 
 			const { channelCount, createdAt, id, memberCount, name, owner, region, roles } = guild;
 
+			const icon = guild.iconURL();
+
 			const textChannels = message.guild.channels.cache.filter(m => m.type === "text").size;
 			const voiceChannels = message.guild.channels.cache.filter(m => m.type === "voice").size;
 
 			const msg = message.channel.send(
 				new MessageEmbed()
 					.setAuthor(`${guild.name}`, guild.iconURL({ format: "png", dynamic: true }))
-					.setThumbnail(`${guild.iconURL()}`)
+					.setThumbnail(icon)
 					.setColor("ORANGE")
 					.addFields(
 						{
