@@ -17,7 +17,6 @@ module.exports = {
 
 		const dateCreated = dayjs(guild.createdAt).format("MM/DD/YYYY");
 
-
 		const channels = message.guild.channels.cache.filter(m => m.type === "category").size;
 		const roles = message.guild.roles.cache.size;
 
