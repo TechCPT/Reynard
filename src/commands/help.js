@@ -24,6 +24,7 @@ module.exports = {
 					\`r!commands\` – COMING SOON!
 					\`r!delete [# of messages]\` – Deletes the inputted amount of messages along with the command used.
 					\`r!ping\` – Shows the bot's current ping.
+					\`r!serverinfo\` — Displays information on the current server.
 					\`r!snipe\` – Reveals the most recently deleted message.
 					`,
 				)
