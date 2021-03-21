@@ -20,7 +20,7 @@ module.exports = {
 
 			const icon = guild.iconURL();
 
-			const dateCreated = dayjs(guild.createdAt).format("YYYY-MM-DD");
+			const dateCreated = dayjs(guild.createdAt).format("MM/DD/YYYY");
 
 			const textChannels = message.guild.channels.cache.filter(m => m.type === "text").size;
 			const voiceChannels = message.guild.channels.cache.filter(m => m.type === "voice").size;
