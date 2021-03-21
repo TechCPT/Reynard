@@ -1,6 +1,8 @@
 const Client = require("../handlers/Client");
 const { Message, MessageEmbed } = require("discord.js");
 
+const dayjs = require("dayjs");
+
 module.exports = {
 	name: "serverinfo",
 	/**
@@ -12,6 +14,8 @@ module.exports = {
 		const { guild } = message;
 
 		const { channelCount, createdAt, id, memberCount, name, owner, region, roles } = guild;
+
+		const dateCreated = dayjs(guild.createdAt).format("YYYY-MM-DD");
 
 		const textChannels = message.guild.channels.cache.filter(m => m.type === "text").size;
 		const voiceChannels = message.guild.channels.cache.filter(m => m.type === "voice").size;
@@ -58,7 +62,7 @@ module.exports = {
 						value: `${guild.roles}`,
 					},
 				)
-				.setFooter(`ID: ${guild.id} | Server Created • ${guild.createdAt}`),
+				.setFooter(`ID: ${guild.id} | Server Created • ${dateCreated}`),
 		);
 	},
 	aliases: ["server"],
