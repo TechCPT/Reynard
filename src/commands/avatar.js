@@ -10,7 +10,9 @@ module.exports = {
      */
 	run: async (client, message, args) => {
 
-		const user = message.mentions.users.first() || message.author;
+		const id = args[0];
+
+		const user = id ? client.users.cache.get(id) || message.mentions.users.first() : message.author;
 
 		const avatar = user.displayAvatarURL({ dynamic: true, size: 256 });
 
