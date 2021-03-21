@@ -13,9 +13,13 @@ module.exports = {
 	run: async (client, message, args) => {
 		const { guild } = message;
 
-		const { channelCount, createdAt, id, memberCount, name, owner, region, roles } = guild;
+		const { createdAt, id, memberCount, name, owner, region } = guild;
 
 		const dateCreated = dayjs(guild.createdAt).format("MM/DD/YYYY");
+
+
+		const channels = message.guild.channels.cache.filter(m => m.type === "category").size;
+		const roles = message.guild.roles.cache.size;
 
 		const textChannels = message.guild.channels.cache.filter(m => m.type === "text").size;
 		const voiceChannels = message.guild.channels.cache.filter(m => m.type === "voice").size;
@@ -38,7 +42,7 @@ module.exports = {
 					},
 					{
 						name: "Channel Categories",
-						value: `${guild.channelCount}`,
+						value: channels,
 						inline: true,
 					},
 					{
@@ -59,7 +63,7 @@ module.exports = {
 					},
 					{
 						name: "Roles",
-						value: `${guild.roles}`,
+						value: roles,
 					},
 				)
 				.setFooter(`ID: ${guild.id} | Server Created • ${dateCreated}`),
