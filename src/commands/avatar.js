@@ -10,13 +10,13 @@ module.exports = {
      */
 	run: async (client, message, args) => {
 
-		const member = message.mentions.users.first() || message.author;
+		const user = message.mentions.users.first() || message.author;
 
-		const avatar = member.displayAvatarURL({ dynamic: true, size: 256 });
+		const avatar = user.displayAvatarURL({ dynamic: true, size: 256 });
 
 		const msg = message.channel.send(
 			new MessageEmbed()
-				.setAuthor(`${message.author.tag}`, member.displayAvatarURL({ format: "png", dynamic: true }))
+				.setAuthor(`${user.tag}`, user.displayAvatarURL({ format: "png", dynamic: true }))
 				.setTitle("Avatar")
 				.setColor("ORANGE")
 				.setImage(avatar),
