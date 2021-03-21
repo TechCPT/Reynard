@@ -12,7 +12,7 @@ module.exports = {
 
 		const member = message.mentions.users.first() || message.author;
 
-		const avatar = member.displayAvatarURL({ dynamic: true, size: 1024 });
+		const avatar = member.displayAvatarURL({ dynamic: true, size: 256 });
 
 		const msg = message.channel.send(
 			new MessageEmbed()
