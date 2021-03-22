@@ -22,7 +22,7 @@ module.exports = {
 					{ name: "Humans", value: message.guild.members.cache.filter(m => !m.user.bot).size, inline: true },
 					{ name: "Bots", value: message.guild.members.cache.filter(m => m.user.bot).size, inline: true },
 				)
-				.setFooter(`${new Date()}`),
+				.setTimestamp(`${new Date()}`),
 		);
 	},
 	aliases: ["members"],
