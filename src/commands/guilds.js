@@ -18,7 +18,7 @@ module.exports = {
 
 			const { createdAt, id, memberCount, name, owner, region } = guild;
 
-			const dateCreated = dayjs(guild.createdAt).format("MM/DD/YYYY");
+			const icon = message.guild.iconURL();
 
 			const channels = message.guild.channels.cache.filter(m => m.type === "category").size;
 			const roles = message.guild.roles.cache.size;
@@ -26,20 +26,22 @@ module.exports = {
 			const textChannels = message.guild.channels.cache.filter(m => m.type === "text").size;
 			const voiceChannels = message.guild.channels.cache.filter(m => m.type === "voice").size;
 
+			const dateCreated = dayjs(createdAt).format("MM/DD/YYYY");
+
 			const msg = message.channel.send(
 				new MessageEmbed()
-					.setAuthor(`${guild.name}`, guild.iconURL({ format: "png", dynamic: true }))
+					.setAuthor(name, guild.iconURL({ format: "png", dynamic: true }))
 					.setThumbnail(icon)
 					.setColor("ORANGE")
 					.addFields(
 						{
 							name: "Owner",
-							value: `${guild.owner.user.tag}`,
+							value: owner,
 							inline: true,
 						},
 						{
 							name: "Region",
-							value: `${guild.region}`,
+							value: region,
 							inline: true,
 						},
 						{
@@ -60,7 +62,7 @@ module.exports = {
 						},
 						{
 							name: "Members",
-							value: `${guild.memberCount}`,
+							value: memberCount,
 							inline: true,
 						},
 						{
@@ -68,7 +70,7 @@ module.exports = {
 							value: roles,
 						},
 					)
-					.setFooter(`ID: ${guild.id} • Server Created: ${dateCreated}`),
+					.setFooter(`ID: ${id} • Server Created: ${dateCreated}`),
 			);
 		});
 	},
