@@ -14,6 +14,8 @@ module.exports = {
 
 		const user = id ? client.users.cache.get(id) || message.mentions.users.first() : message.author;
 
+		if(!user) return message.channel.send("User not found!");
+
 		const avatar = user.displayAvatarURL({ dynamic: true, size: 256 });
 
 		const msg = message.channel.send(
