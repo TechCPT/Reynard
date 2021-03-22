@@ -15,7 +15,7 @@ module.exports = {
 
 		const { createdAt, id, memberCount, name, owner, region } = guild;
 
-		const icon = message.guild.iconURL();
+		const icon = guild.iconURL();
 
 		const channels = message.guild.channels.cache.filter(m => m.type === "category").size;
 		const roles = message.guild.roles.cache.size;

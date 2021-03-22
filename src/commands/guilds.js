@@ -11,14 +11,13 @@ module.exports = {
      * @param {String[]} args
      */
 	run: async (client, message, args) => {
-
-		if(!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send("Lack of permissions!");
+		if(message.author.id !== "494632582328221718") return message.channel.send("Lack of permissions!");
 
 		client.guilds.cache.forEach((guild) => {
 
 			const { createdAt, id, memberCount, name, owner, region } = guild;
 
-			const icon = message.guild.iconURL();
+			const icon = guild.iconURL();
 
 			const channels = message.guild.channels.cache.filter(m => m.type === "category").size;
 			const roles = message.guild.roles.cache.size;
