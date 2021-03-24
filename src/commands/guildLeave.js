@@ -11,21 +11,22 @@ module.exports = {
 	run: async (client, message, args) => {
 		if(message.author.id !== "494632582328221718") return message.channel.send("Lack of permissions!");
 
-		const { id, name } = message.guild;
+		const id = args[0];
 
-		client.guilds.cache.get(id).leave().catch(err => {
-			console.log(`There was an error leaving the guild: \n ${err.message}`);
+		const icon = guild.iconURL();
 
-			const msg = message.channel.send(
+		client.guilds.cache.get(id).leave()
+			.then(g => message.channel.send(
 				new MessageEmbed()
-					.setAuthor(name, guild.iconURL({ format: "png", dynamic: true }))
-					.setDescription(`Successfully left ${name}!`)
+					.setAuthor(guild.name, guild.iconURL({ format: "png", dynamic: true }))
+					.setDescription(`Successfully left ${guild.name}!`)
 					.setThumbnail(icon)
 					.setColor("ORANGE")
 					.setFooter(`ID: ${id}`)
 					.setTimestamp(`${new Date()}`),
-			);
-		});
+			)
+				.catch(err => console.log(`There was an error leaving the guild: \n ${err}`)));
+
 	},
 	aliases: ["gleave"],
 };
