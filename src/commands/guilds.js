@@ -19,11 +19,11 @@ module.exports = {
 
 			const icon = guild.iconURL();
 
-			const channels = message.guild.channels.cache.filter(m => m.type === "category").size;
-			const roles = message.guild.roles.cache.size;
+			const channels = guild.channels.cache.filter(m => m.type === "category").size;
+			const roles = guild.roles.cache.size;
 
-			const textChannels = message.guild.channels.cache.filter(m => m.type === "text").size;
-			const voiceChannels = message.guild.channels.cache.filter(m => m.type === "voice").size;
+			const textChannels = guild.channels.cache.filter(m => m.type === "text").size;
+			const voiceChannels = guild.channels.cache.filter(m => m.type === "voice").size;
 
 			const dateCreated = dayjs(createdAt).format("MM/DD/YYYY");
 
