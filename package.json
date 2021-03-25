@@ -1,5 +1,5 @@
 {
-  "name": "reynard-discordjsbot",
+  "name": "Reynard",
   "version": "1.0.0",
   "description": "",
   "main": "reynard.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TechCPT/reynard-discordjsbot.git"
+    "url": "git+https://github.com/TechCPT/Reynard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TechCPT/reynard-discordjsbot/issues"
+    "url": "https://github.com/TechCPT/Reynard/issues"
   },
-  "homepage": "https://github.com/TechCPT/reynard-discordjsbot#readme",
+  "homepage": "https://github.com/TechCPT/Reynard#readme",
   "dependencies": {
     "common-tags": "^1.8.0",
     "dayjs": "^1.10.4",
