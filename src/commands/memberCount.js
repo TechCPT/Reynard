@@ -1,8 +1,6 @@
 const Client = require("../handlers/Client");
 const { Message, MessageEmbed, Constants } = require("discord.js");
 
-const dayjs = require("dayjs");
-
 module.exports = {
 	name: "membercount",
 	/**
