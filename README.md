@@ -1,11 +1,11 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/techcpt/reynard-discordjsbot/badge)](https://www.codefactor.io/repository/github/techcpt/reynard-discordjsbot)
-[![Top language](https://img.shields.io/github/languages/top/TechCPT/reynard-discordjsbot)](https://github.com/TechCPT/reynard-discordjsbot)
-[![Last commit](https://img.shields.io/github/last-commit/TechCPT/reynard-discordjsbot)](https://github.com/TechCPT/reynard-discordjsbot)
+[![CodeFactor](https://www.codefactor.io/repository/github/techcpt/Reynard/badge)](https://www.codefactor.io/repository/github/techcpt/Reynard)
+[![Top language](https://img.shields.io/github/languages/top/TechCPT/Reynard)](https://github.com/TechCPT/Reynard)
+[![Last commit](https://img.shields.io/github/last-commit/TechCPT/Reynard)](https://github.com/TechCPT/Reynard)
 
 [![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
-[![](https://tokei.rs/b1/github/TechCPT/reynard-discordjsbot?category=lines)](https://github.com/TechCPT/reynard-discordjsbot) 
-[![](https://tokei.rs/b1/github/TechCPT/reynard-discordjsbot?category=code)](https://github.com/TechCPT/reynard-discordjsbot) 
-[![](https://tokei.rs/b1/github/TechCPT/reynard-discordjsbot?category=files)](https://github.com/TechCPT/reynard-discordjsbot)
+[![](https://tokei.rs/b1/github/TechCPT/Reynard?category=lines)](https://github.com/TechCPT/Reynard) 
+[![](https://tokei.rs/b1/github/TechCPT/Reynard?category=code)](https://github.com/TechCPT/Reynard) 
+[![](https://tokei.rs/b1/github/TechCPT/Reynard?category=files)](https://github.com/TechCPT/Reynard)
 
 
 # Reynard Bot
@@ -29,6 +29,6 @@ ID: <@801966643626377216>
 - Clone your forked repository to your local machine
 - Make a branch by running `git checkout -b BRANCH_NAME`
 - Add, commit, and push your code to the branch on GitHub
-- Go to [this](https://github.com/TechCPT/reynard-discordjsbot) repository and create a pull request
+- Go to [this](https://github.com/TechCPT/Reynard) repository and create a pull request
 - Get your pull request reviewed
 - **OPTIONAL**: Use [Pull](https://probot.github.io/apps/pull/) to keep your fork **up to date** with this repository!
