@@ -13,10 +13,10 @@ module.exports = {
 		if(!msg) return message.channel.send("There are no deleted messages in this channel!");
 		const embed = new MessageEmbed()
 			.setColor("ORANGE")
-			.setAuthor(msg.author, msg.author.displayAvatarURL({ format: "png", dynamic: true }))
+			.setAuthor(msg.author, message.guild.members.cache.find(u => u.user.tag == msg.author).user.displayAvatarURL({ format: "png", dynamic: true }))
 			.setDescription(msg.content)
 			.setFooter(`Requested by ${message.author.tag} | ${client.user.username}`)
-			.setTimestamp();
+			.setTimestamp(`${new Date()}`);
 		if(msg.image)embed.setImage(msg.image);
 
 		message.channel.send(embed);
