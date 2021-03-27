@@ -18,7 +18,7 @@ module.exports = {
 				.setDescription(stripIndents`
 					Reynard is a multipurpose Discord bot built with Node.js.
 
-					Reynard currently has **8** public commands available!
+					Reynard currently has **9** public commands available!
 
 					Reynard Official Discord — https://discord.gg/heHzCu3mx8
 					
