@@ -18,13 +18,12 @@ module.exports = {
 				.setDescription(stripIndents`
 					Reynard is a multipurpose Discord bot built with Node.js.
 
-					Reynard currently has **9** public commands available!
+					Reynard currently has **8** public commands available!
 
 					Reynard Official Discord — https://discord.gg/heHzCu3mx8
 					
 					**List of Reynard Bot Commands**
 					\`r!avatar\` — Displays the avatar image of a user.
-					\`r!commands\` – COMING SOON!
 					\`r!delete [# of messages]\` – Deletes the inputted amount of messages along with the command used.
 					\`r!help\` — Displays information about the bot.
 					\`r!invite\` — Reynard's invite link.
