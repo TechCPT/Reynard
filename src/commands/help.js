@@ -37,5 +37,6 @@ module.exports = {
 				.setTimestamp(`${new Date()}`),
 		);
 	},
+	aliases: ["info"],
 };
 
