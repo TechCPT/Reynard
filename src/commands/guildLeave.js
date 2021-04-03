@@ -13,6 +13,8 @@ module.exports = {
 
 		const id = args[0];
 
+		if(!id) return message.channel.send("You must specify a guild id to leave!");
+
 		client.guilds.cache.get(id).leave()
 			.then(guild => {
 				const icon = guild.iconURL();
